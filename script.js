@@ -1,46 +1,42 @@
-// Галерея инициализация
-lightbox.option({
-    'resizeDuration': 200,
-    'wrapAround': true
-});
+// Генератор предсказаний
+const prophecies = [
+    "Ертең ешкі Бейбарыстың көлеңкесінен өтеді - ұлы істер күт!",
+    "Барар жеріңді білмейсің бе? Сенің тағдырыңда бір ешкі бар!",
+    "Үш рет меңзегенде - бақыт келеді!",
+    "Жасырын құрметтеуші саған шөп сыйлайды... бұл Грета!"
+];
 
-// Форма обратной связи
-document.getElementById('contactForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    alert('Хабарлама жіберілді! Рахмет!');
-    this.reset();
-});
-// Коза-компаньон
+function generateProphecy() {
+    const textElement = document.getElementById('prophecy-text');
+    textElement.textContent = prophecies[Math.floor(Math.random() * prophecies.length)];
+    new Audio('assets/sounds/meee1.mp3').play();
+}
+
+// Анимированная коза
 let isJumping = false;
 
 function jumpGreta() {
     if (!isJumping) {
         isJumping = true;
         const goat = document.querySelector('.goat-body');
-        goat.classList.add('goat-jump');
-        
-        // Добавляем звук "Меее" (нужен аудиофайл)
-        const meSound = new Audio('sounds/meee.mp3');
-        meSound.play();
-
+        goat.style.transform = 'translateY(-100px)';
         setTimeout(() => {
-            goat.classList.remove('goat-jump');
+            goat.style.transform = 'translateY(0)';
             isJumping = false;
-        }, 800);
+        }, 500);
     }
 }
 
-// Коза ходит по экрану каждые 30 секунд
+// Инициализация Lightbox
+lightbox.option({
+    'resizeDuration': 200,
+    'wrapAround': true
+});
+
+// Перемещение козы
 setInterval(() => {
     const goat = document.getElementById('goat-greta');
-    const xPos = Math.random() * (window.innerWidth - 100);
-    const yPos = Math.random() * (window.innerHeight - 100);
-    
-    goat.style.transform = `translate(${xPos}px, ${yPos}px)`;
+    const x = Math.random() * (window.innerWidth - 100);
+    const y = Math.random() * (window.innerHeight - 100);
+    goat.style.transform = `translate(${x}px, ${y}px)`;
 }, 30000);
-
-// Начальная позиция
-document.addEventListener('DOMContentLoaded', () => {
-    const goat = document.getElementById('goat-greta');
-    goat.style.transform = 'translate(-50px, 50px)';
-});
