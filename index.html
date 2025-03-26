@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <title>Бейбарыс Badboy - Ресми сайт</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+</head>
+<!-- Анимированная коза Грета -->
+<div id="goat-greta" onclick="jumpGreta()">
+    <div class="goat-body">🐐</div>
+    <div class="goat-shadow"></div>
+</div>
+<body>
+    <!-- Навигация -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">BADBOY</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#main">Басты</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#bio">Биография</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#music">Музыка</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery">Галерея</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Байланыс</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Главный баннер -->
+    <header id="main" class="main-banner">
+        <div class="banner-text">
+            <h1>Бейбарыс Badboy</h1>
+            <p>Қазақстанның ең жаңа дыбысы</p>
+        </div>
+    </header>
+
+    <!-- Биография -->
+    <section id="bio" class="section">
+        <div class="container">
+            <h2>Биография</h2>
+            <div class="bio-content">
+                <div class="bio-image">
+                    <img src="images/beybarys-comic.jpg" alt="Бейбарыс и его коза Грета">
+                    <div class="image-caption">Бейбарыс и его верный "военачальник" Грета</div>
+                </div>
+                <div class="bio-text">
+                    <h3>История, которую вам не расскажут в учебниках:</h3>
+                    
+                    <p>🎭 Бейбарыс — это не просто знаменитый военачальник XIII века; 
+                    это настоящая легенда и, по совместительству, обладатель удивительной 
+                    и не менее смешной биографии!</p>
+    
+                    <div class="bio-highlight">
+                        <p>🏡 Родился в небольшой деревне, где его главным развлечением было:</p>
+                        <ul>
+                            <li>Гоняться за козами</li>
+                            <li>Строить песочные крепости</li>
+                            <li>Играть в "вождя племени" (версия для лужи)</li>
+                        </ul>
+                    </div>
+    
+                    <p>⚔️ Первая попытка завоевания: <br>
+                    <em>"Покорение козы Греты"</em> окончилось эпик фейлом — 
+                    будущий полководец был сбит с ног... собственным воображением!</p>
+    
+                    <div class="bio-timeline">
+                        <div class="timeline-item">
+                            <span class="year">1240 г.</span>
+                            <p>Набор армии из:<br>
+                            - 2 недоумевающих подростков<br>
+                            - Стада коз (Грета стала генералом)</p>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <span class="year">1241 г.</span>
+                            <p>Первое "сражение":<br>
+                            Проиграл битву с мечом против козьего рога</p>
+                        </div>
+                    </div>
+    
+                    <blockquote class="bio-quote">
+                        "На войне главное — сплоченность... и шутки про коз!"
+                        <footer>- Философия Бейбарыса</footer>
+                    </blockquote>
+    
+                    <p class="conclusion">🎉 Так Бейбарыс стал легендой благодаря:<br>
+                    1. Чувству юмора<br>
+                    2. Упорству<br> 
+                    3...и стаду невероятно терпеливых коз!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Музыка -->
+    <section id="music" class="section dark-bg">
+        <div class="container">
+            <h2>Последние искусство</h2>
+            <div class="music-player">
+                <audio controls>
+                    <source src="music/бейбарис.mp3" type="audio/mpeg">
+                    Браузеріңіз аудионы қолдамайды.
+                </audio>
+            </div>
+        </div>
+    </section>
+
+    <!-- Галерея -->
+    <section id="gallery" class="section">
+        <div class="container">
+            <h2>Фото галерея</h2>
+            <div class="gallery-grid">
+                <a href="images/Снимок экрана 2025-01-09 193629.png" data-lightbox="gallery"><img src="images/Снимок экрана 2025-01-09 193629.png" alt=""></a>
+                <a href="images/Снимок экрана 2025-03-26 180600.png" data-lightbox="gallery"><img src="images/Снимок экрана 2025-03-26 180600.png" alt=""></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section id="contact" class="section dark-bg">
+        <div class="container">
+            <h2>Байланыс</h2>
+            <form id="contactForm">
+                <input type="text" placeholder="Атыңыз" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Хабарлама..." required></textarea>
+                <button type="submit">Жіберу</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+            </div>
+            <p>© 2024 Бейбарыс Badboy. Барлық құқықтар сақталған.</p>
+        </div>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/ваш-код.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
